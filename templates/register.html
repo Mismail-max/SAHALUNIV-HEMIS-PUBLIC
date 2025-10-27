@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Register - Sahal University</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+  <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+  <script src="{{ url_for('static', filename='js/password_checker') }}"></script>
+</head>
+<body class="bg-light">
+   <!-- Flash Messages -->
+   {% with messages = get_flashed_messages(with_categories=true) %}
+   {% if messages %}
+     {% for category, message in messages %}
+     <div class="alert alert-{{ category }} alert-dismissible fade show mt-3" role="alert">
+       {{ message }}
+       <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+     </div>
+     {% endfor %}
+   {% endif %}
+   {% endwith %}
+  <div class="container d-flex justify-content-center align-items-center" style="min-height: 95vh;">
+    <div class="col-md-8">
+      <div class="card shadow-lg p-4 rounded-4">
+        <div class="text-center mb-4">
+          <h3 class="text-success fw-bold">Create Your Account</h3>
+        </div>
+        <form method="POST" class="row g-3">
+          <div class="col-md-6">
+            <label class="form-label">First Name</label>
+            <input type="text" name="first_name" class="form-control" required placeholder="first name">
+          </div>
+          <div class="col-md-6">
+            <label class="form-label">Last Name</label>
+            <input type="text" name="last_name" class="form-control" required placeholder="last name">
+          </div>
+          <div class="col-md-12">
+            <label class="form-label">Email</label>
+            <input type="email" name="email" class="form-control" required placeholder="e.g email">
+          </div>
+          <div class="col-md-6">
+            <label class="form-label">Username</label>
+            <input type="text" name="username" class="form-control" required placeholder="username">
+          </div>
+          <div class="col-md-6">
+            <label class="form-label">Password</label>
+            <input type="password" name="password" class="form-control" required placeholder="password">
+            <div class="form-text small" id="passwordHelp">
+              Password must contain:
+              <ul class="mb-0 small list-unstyled" id="passwordCriteria">
+                <li id="length" class="text-danger">❌ At least 8 characters</li>
+                <li id="uppercase" class="text-danger">❌ One uppercase letter (A–Z)</li>
+                <li id="lowercase" class="text-danger">❌ One lowercase letter (a–z)</li>
+                <li id="number" class="text-danger">❌ One number (0–9)</li>
+                <li id="special" class="text-danger">❌ One special character (! @ # $ % ^ & *)</li>
+              </ul>
+            </div>
+            
+          </div>
+          <div class="col-12 d-grid mt-3">
+            <button type="submit" class="btn btn-success">Register</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <script src="{{ url_for('static', filename='js/password_checker.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+# version: '3.9'
+services:
+  mysql:
+    image: mysql:latest
+    container_name: mysql
+    restart: always
+    env_file: .env
+    environment:
+      MYSQL_DATABASE: ${DB_NAME}
+      MYSQL_USER: ${DB_USER}
+      MYSQL_PASSWORD: ${DB_PASSWORD}
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+      - ./static/sql/init.sql:/docker-entrypoint-initdb.d/init.sql
+  flask-app:
+    build: .
+    container_name: hemis-app
+    restart: always
+    depends_on:
+      - mysql
+    ports:
+      - "5001:5001"
+    env_file:
+      - .env
+    volumes:
+      - .:/app
+      - ./static:/app/static:ro
+volumes:
+  mysql_data:

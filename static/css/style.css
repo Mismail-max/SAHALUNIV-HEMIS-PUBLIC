@@ -1,0 +1,179 @@
+/* ----------------------------------------
+   Page Background Styling
+---------------------------------------- */
+body {
+  background: linear-gradient(135deg, #eef2f3, #d9e4f5);
+  min-height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+}
+
+/* ----------------------------------------
+   Card Animation
+---------------------------------------- */
+.animated-card {
+  animation: fadeInUp 0.7s ease-in-out both;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ----------------------------------------
+   Button Styles
+---------------------------------------- */
+.check-btn {
+  background-color: #007bff;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.check-btn:hover {
+  background-color: #0056b3;
+}
+
+/* ----------------------------------------
+   Table Styling
+---------------------------------------- */
+.table-wrapper {
+  overflow-x: auto;
+  max-width: 100%;
+  white-space: nowrap;
+  border-radius: 0.5rem;
+  border: 1px solid #dee2e6;
+  margin-bottom: 1rem;
+  background-color: #ffffff;
+}
+
+.table th,
+.table td {
+  white-space: nowrap;
+  vertical-align: middle;
+}
+
+.table td:first-child,
+.table th:first-child {
+  position: sticky;
+  left: 0;
+  background-color: #f8f9fa;
+  z-index: 1;
+}
+
+.table tbody tr:nth-child(even) {
+  background-color: #f2f9fd;
+}
+
+.scroll-table-wrapper {
+  overflow-x: auto;
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+.scroll-table-wrapper::-webkit-scrollbar {
+  height: 8px;
+}
+
+.scroll-table-wrapper::-webkit-scrollbar-thumb {
+  background-color: #ced4da;
+  border-radius: 4px;
+}
+
+.table thead th {
+  white-space: nowrap;
+}
+
+/* ----------------------------------------
+   Upload & Search Section Styling
+---------------------------------------- */
+.search-card {
+  background: #ffffffb5;
+  backdrop-filter: blur(5px);
+  border-left: 5px solid #0d6efd;
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+}
+.search-section {
+    border-left: 5px solid #198754;
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+}
+
+.upload-card {
+  background-color: #f8fdf8;
+  border-left: 5px solid #198754;
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+}
+
+.upload-card h5 {
+  color: #198754;
+}
+
+/* ----------------------------------------
+   General Card Enhancements
+---------------------------------------- */
+.card {
+  background-color: #ffffff;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  margin-top: 1.5rem;
+}
+
+/* ----------------------------------------
+   Pagination Overflow Fix
+---------------------------------------- */
+
+.pagination {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  overflow-x: auto;
+  padding: 10px;
+  margin-top: 1rem;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  max-width: 100%;
+}
+
+.pagination .page-item {
+  flex: 0 0 auto;
+  margin: 2px;
+}
+
+.pagination .page-link {
+  border-radius: 6px;
+  color: #007bff;
+}
+
+.pagination .page-link:hover {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.page-item.active .page-link {
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+
+.pagination::-webkit-scrollbar {
+  height: 8px;
+}
+
+.pagination::-webkit-scrollbar-thumb {
+  background-color: #ced4da;
+  border-radius: 4px;
+}
