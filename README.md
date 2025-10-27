@@ -28,7 +28,7 @@ This is a Flask-based web application that allows users to search for student re
 1. **Clone this repository:**
 
    ```bash
-   git clone https://github.com/Mismail-max/SahalUniv-Hemis.git
+   git clone https://github.com/Mismail-max/SAHALUNIV-HEMIS-PUBLIC.git
    cd SahalUniv-Hemis
    ```
 2. **Create a local .env file with the below content**  
