@@ -29,7 +29,7 @@ This is a Flask-based web application that allows users to search for student re
 
    ```bash
    git clone https://github.com/Mismail-max/SAHALUNIV-HEMIS-PUBLIC.git
-   cd SahalUniv-Hemis
+   cd SAHALUNIV-HEMIS-PUBLIC
    ```
 2. **Create a local .env file with the below content**  
    ```
